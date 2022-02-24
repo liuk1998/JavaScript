@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-02-24 10:20:53
- * @LastEditTime: 2022-02-24 13:59:11
+ * @LastEditTime: 2022-02-24 14:05:29
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /JavaScript/js/overall.js
@@ -24,8 +24,6 @@ let arr = [];
 let func = function getType() {};
 // todo     typeof()对于原始类型来说, 除了 null, 都可以显示正确的类型。对于引用类型来说, 除了函数都会显示 object。
 console.log('%c 判断类型>>>typeof()', 'color: brown', typeof(count), typeof(null), typeof(arr), typeof(func));
-// todo     instanceof可以精准判断引用类型(Array，Function，Object), 而基本类型不能被instanceof精准判断。(通过原型链)
-console.log('%c 判断类型>>>instanceof', 'color: brown', count instanceof Number, arr instanceof Array, func instanceof Function);
 // todo     instanceof可以精准判断引用类型(Array，Function，Object), 而基本类型不能被instanceof精准判断。(通过原型链)
 console.log('%c 判断类型>>>instanceof', 'color: brown', count instanceof Number, arr instanceof Array, func instanceof Function);
 // todo     Object.prototype.toString.call()精准判断类型。返回为[object 类型]。

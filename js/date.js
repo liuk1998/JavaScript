@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-02-24 10:26:58
- * @LastEditTime: 2022-02-24 10:49:55
+ * @LastEditTime: 2022-02-24 17:17:06
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /JavaScript/js/date.js
@@ -22,3 +22,8 @@ let localDate = date1.toLocaleDateString(); // todo 获取当前日期
 let localTime = date1.toLocaleTimeString(); // todo 获取当前时间
 let dateTime = date1.toLocaleString( ); // todo 获取日期与时间
 console.log('%c 时间>>> new Date()', 'color: rgb(19,199,153)', date1, yearFull, month, day, week, time, hour, minutes, seconds, milliseconds, localDate, localTime, dateTime);
+
+
+// todo 快速获取时间戳
+let newDate1 = +new Date();
+let newDate2 = Date.now();

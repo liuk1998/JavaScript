@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-02-18 17:29:03
- * @LastEditTime: 2022-02-24 10:13:46
+ * @LastEditTime: 2022-02-24 16:47:51
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /JavaScript/js/string.js
@@ -97,3 +97,9 @@ console.log('%c string方法>>> trim(),去除字符串两边的空白。', 'colo
 let num1 = 110;
 let finStr18 = num1.toString();
 console.log('%c string方法>>> toString(),返回一个字符串。', 'color: green', finStr18);
+
+
+
+// ! 模板字符串表达式
+let name2 = "蛙人";
+console.log('%c 模板字符串表达式>>> ', 'color: green', `hello ${name2}`, `<p>${name2}</p>`);
