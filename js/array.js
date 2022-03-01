@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-02-24 17:17:54
- * @LastEditTime: 2022-02-24 18:10:21
+ * @LastEditTime: 2022-02-25 18:07:53
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /JavaScript/js/array.js
@@ -10,6 +10,8 @@ let array = [1,22,13,41,65,16,79];
 
 // ! indexOf() 用于查找数组中是否存在某个值，如果存在则返回某个值的下标，否则返回-1。
 let arrIn = array.indexOf(13); // 2
+// ! includes() 检测数组中是否存在该元素，返回Boolean值
+let arrIncludes = array.includes(13); // true
 
 
 
@@ -47,4 +49,77 @@ let arrSome = arrSlice.some(itm => itm > 50); // true
 
 // ! reduce() 不改变原数组。接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。接收四个参数, 一般只用前两个就行，reduce第一个参数回调函数，计算结束后的返回值, 第二个参数是初始值
 let arrReduce = arrSlice.reduce((i, p) => i += p, 0); // 214
-console.log(arrReduce);
+
+
+
+// ! reverse() 改变原数组。用于数组反转
+array.reverse(); // [79, 16, 65, 41, 13, 'ok']
+
+
+
+// ! join() 用于数据以什么形式拼接
+let arrJoin = array.join('-'); // 79-16-65-41-13-ok
+// ! toString() 用于将数组内容转换为字符串
+let arrString = array.toString(); // 79,16,65,41,13,ok
+
+
+
+// ! sort() 改变原数组。用于将数组排序，排序规则看返回值。返回值为正数,后面的数在前面。返回值为负数,前面的数不变,还在前面。返回值为0,都不动。
+arrSlice.sort((a, b) => a - b); // [13, 16, 41, 65, 79]
+
+
+
+// ! concat() 不改变原数组。用于合并数组原始
+let arrConcat = arrSlice.concat([1,2,3]); // [13, 16, 41, 65, 79, 1, 2, 3]
+
+
+
+// ! push() 改变原数组。向数组后面添加元素，返回值为数组的length
+arrConcat.push(22); // [13, 16, 41, 65, 79, 1, 2, 3, 22]
+// ! pop() 改变原数组。用于删除数组尾部的元素，返回值为删除的元素
+arrConcat.pop(); // [13, 16, 41, 65, 79, 1, 2, 3]
+// ! shift() 改变原数组。用于删除数组的头部，返回值为删除的元素
+arrConcat.shift(); // [16, 41, 65, 79, 1, 2, 3]
+// ! unshift() 改变原数组。向数组的头部添加元素，返回值为数组的length
+arrConcat.unshift(555); // [555, 16, 41, 65, 79, 1, 2, 3]
+
+
+
+// ! Array.isArray() 检测对象是不是一个数组
+let arrIs = Array.isArray(arrConcat); // true
+
+
+
+// ! find() 查找数组的元素，满足条件的返回单个值，按照就近原则返回
+let arrFind = arrConcat.find(itm => itm > 10); // 555
+// ! findIndex() 查找数组中元素，满足条件的返回数组下标
+let arrFindIdx = arrConcat.findIndex(itm => itm > 1000); // -1
+
+
+
+// ! flat() 用于拉平嵌套数组对象
+let arrDb = [1,2,3,[4,5],[[6,7]]];
+let arrFlat = arrDb.flat(Infinity); // [1, 2, 3, 4, 5, 6, 7]
+
+
+
+// ! fill() 改变原数组。用于填充数组对象
+arrFlat.fill(2); // [2, 2, 2, 2, 2, 2, 2]
+
+
+
+// ! Array.of() 用于生成一个数组对象，主要是用来弥补Array()的不足
+let arrOf = Array.of(3,2,111); // [3, 2, 111]
+
+
+
+// ! 扩展运算符
+// todo 复制数组
+let arrBig1 = [...arrOf]; // [3, 2, 111]
+// todo 合并数组
+let arrBig2 = [...arrOf, ...arrConcat, ...arrSlice]; // [3, 2, 111, 555, 16, 41, 65, 79, 1, 2, 3, 13, 16, 41, 65, 79]
+// todo 将字符串转为真正的数组
+let arrStr = 'hello';
+let arrBig3 = [...arrStr]; // ['h', 'e', 'l', 'l', 'o']
+// todo 将一个数组转为用逗号分隔的参数序列(用于传参)
+//console.log(...arrOf); // 3 2 111
