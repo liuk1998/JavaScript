@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-02-25 18:06:46
- * @LastEditTime: 2022-03-01 15:29:08
+ * @LastEditTime: 2022-03-16 10:24:37
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /JavaScript/js/Set_Map.js
@@ -47,5 +47,3 @@ let map3 = new Map(Object.entries(objNew)); // Map(2) {'1' => '刘可', '2' => 
 map1.delete('name');
 // todo 清除所有成员，没有返回值。
 map1.clear();
-
-
