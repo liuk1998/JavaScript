@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2022-02-25 11:07:56
- * @LastEditTime: 2022-03-01 16:32:35
- * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: /JavaScript/js/promise.js
- */
-
 // ! Promise对象三种状态: 1.pending: 初始状态。2.fulfilled: 成功。3.rejected: 失败。Promise 对象的状态改变，只有两种可能：从 Pending 变为 Resolved 和从 Pending 变为 Rejected。
 // todo 创建
 let promise = new Promise((resolve, reject) => {

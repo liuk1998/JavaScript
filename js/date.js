@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2022-02-24 10:26:58
- * @LastEditTime: 2022-03-01 16:26:55
- * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: /JavaScript/js/date.js
- */
-
 // ! 时间
 let date1 = new Date(); // todo 中国标准时间
 let yearFull = date1.getFullYear(); // todo 获取完整的年份

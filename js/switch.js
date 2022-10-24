@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2022-02-17 16:24:07
- * @LastEditTime: 2022-02-18 17:31:42
- * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: /JavaScript/js/switch.js
- */
-
 // todo switch值匹配
 const date = new Date().getDay();
 switch (date) {

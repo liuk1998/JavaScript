@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2022-02-18 13:54:32
- * @LastEditTime: 2022-02-18 17:33:55
- * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: /JavaScript/js/DOM.js
- */
 // ! 查找 HTML 元素:  id、标签名、类名。
 // todo 通过 id 查找 HTML 元素
 let box = document.getElementById('box');
